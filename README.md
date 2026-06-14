@@ -74,6 +74,31 @@ Those who require the limit raised above one hundred need only amend the two
 appearances of `#100`. Those who raise it very far are reminded that the answers
 will continue to arrive in Roman numerals, and may reflect on their choices.
 
+## ON THE LIMITS OF AMBITION
+
+The reader of expansive temperament will wish to know how far the program may be
+pushed before it abandons its dignity. The answer is **32767**, that being
+2¹⁵ − 1, and we beg the reader not to mistake this for the 65535 that a 16-bit
+spot would otherwise promise.
+
+The shortfall is a matter of honour rather than of storage. Lacking any
+conditional worthy of the name, the program counterfeits the comparison "has J
+overtaken N?" by subtracting the one from the other and inspecting bit fifteen
+of the remainder, as though it were a sign. This polite fiction holds only so
+long as the quantities concerned keep below 2¹⁵; cross that meridian and an
+entirely respectable number puts on the mask of a negative one, whereupon the
+loop, deceived, gives up the ghost before printing so much as a `II`.
+
+The candid will observe that the program in fact limps on as far as 32769, the
+two numbers above 32767 being composite and thus declining to provoke the
+arithmetic into mischief; 32770 is the first ceiling at which it fails outright,
+and fails completely. We decline to advertise this reprieve as a feature, it
+being a coincidence of where the primes happen to fall rather than any merit of
+the author's, and we name 32767 as the largest ceiling below which correctness
+asks no favours of fortune. Those requiring loftier ambitions are directed to
+replace the sign with an honest borrow, and to brace themselves for the day the
+computation of twice a prime overflows the addition routine in turn.
+
 ## ON POLITENESS
 
 The compiler, like any institution of standing, declines to associate with the
